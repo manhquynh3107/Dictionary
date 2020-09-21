@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Từ điển</title>
+</head>
+<input type="text" id="value">
+<button type="button" onclick="Search()">Tìm kiếm</button>
+<body>
+<script>
+    function Search() {
+        let is_english = ["Hello"];
+        let is_viet = ["Xin Chao"];
+        let input_value = document.getElementById("value").value;
+        let flag = false;
+        for (let i = 0; i < is_viet.length; i++) {
+            if (input_value == is_english[i]){
+                alert(is_viet[i]);
+                flag = true;
+            }
+        }
+        if (!flag){
+            alert('Không tìm thấy');
+        }
+    }
+</script>
+</body>
+</html>
